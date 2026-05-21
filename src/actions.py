@@ -9,6 +9,7 @@ if TYPE_CHECKING:
     from engine import Engine
     from entity import Actor, Entity, Item
 
+
 class Action:
     def __init__(self, entity: Actor) -> None:
         super().__init__()
@@ -29,6 +30,8 @@ class Action:
         This method must be overridden by Action subclasses.
         """
         raise NotImplementedError()
+
+
 class PickupAction(Action):
     """Pickup an item and add it to the inventory, if there is room for it."""
 
@@ -54,6 +57,7 @@ class PickupAction(Action):
 
         raise exceptions.Impossible("There is nothing here to pick up.")
 
+
 class ItemAction(Action):
     def __init__(
         self, entity: Actor, item: Item, target_xy: Optional[Tuple[int, int]] = None
@@ -78,9 +82,23 @@ class DropItem(ItemAction):
     def perform(self) -> None:
         self.entity.inventory.drop(self.item)
 
+
 class WaitAction(Action):
     def perform(self) -> None:
         pass
+
+class TakeStairsAction(Action):
+    def perform(self) -> None:
+        """
+        Take the stairs, if any exist at the entity's location.
+        """
+        if (self.entity.x, self.entity.y) == self.engine.game_map.downstairs_location:
+            self.engine.game_world.generate_floor()
+            self.engine.message_log.add_message(
+                "You descend the staircase.", color.descend
+            )
+        else:
+            raise exceptions.Impossible("There are no stairs here.")
 
 class ActionWithDirection(Action):
     def __init__(self, entity: Actor, dx: int, dy: int):
