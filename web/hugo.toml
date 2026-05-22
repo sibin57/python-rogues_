@@ -80,7 +80,7 @@ pagination.pagerSize = 5
       owner = ""
       keywords = ""
       copyright = ""
-     menuMore = "Показать ещё"
+      menuMore = "Показать ещё"
       readMore = "Читать дальше"
       readOtherPosts = "Прочитать другие посты"
       newerPosts = "Новые посты"
@@ -104,9 +104,9 @@ pagination.pagerSize = 5
           name = "Источники"
           url = "/links"
         [[languages.ru.menu.main]]
-          identifier = "blog"
+          identifier = "posts"
           name = "Блог"
-          url = "/blog"
+          url = "/posts"
         [[languages.ru.menu.main]]
           identifier = "contributors"
           name = "Участники"
