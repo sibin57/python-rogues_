@@ -71,12 +71,12 @@ pagination.pagerSize = 5
   [languages.ru]
     languageName = "Russian"
     disabled = false
-    title = "Терминал"
+    title = "Python-rogues"
     weight = 0
     timeZone = "Europe/Moscow"
 
     [languages.ru.params]
-      #subtitle = "Маленькая смешная проектина"
+      #subtitle = ""
       owner = ""
       keywords = ""
       copyright = ""
@@ -91,7 +91,7 @@ pagination.pagerSize = 5
       words = "слов"
 
       [languages.ru.params.logo]
-        logoText = "Терминал"
+        logoText = "Python-rogues"
         logoHomeLink = "/"
 
       [languages.ru.menu]
