@@ -1,4 +1,9 @@
-baseurl = "/python-rogues_/"
+#Если запускаете локально, закоментируйте python-rouges и раскоментируйте /
+
+baseurl = "/python-rogues_/" #для pages
+#baseurl = "/" #для локального пользования
+
+
 languageCode = "ru-ru"
 
 defaultContentLanguage = 'ru'
