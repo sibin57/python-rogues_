@@ -92,7 +92,6 @@ pagination.pagerSize = 5
 
       [languages.ru.params.logo]
         logoText = "Python-rogues"
-        logoHomeLink = "/"
 
       [languages.ru.menu]
         [[languages.ru.menu.main]]
