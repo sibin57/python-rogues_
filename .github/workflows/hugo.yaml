@@ -81,8 +81,8 @@ jobs:
       - name: Build the site
         run: |
           hugo build \
-            -s ./site/
-            #--gc \ 
+            -s "./site/"\
+            --gc \ 
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
