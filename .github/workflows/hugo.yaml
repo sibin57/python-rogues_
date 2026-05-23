@@ -82,7 +82,7 @@ jobs:
         run: |
           hugo build \
             -s "./site/"\
-            --gc \ 
+            --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
